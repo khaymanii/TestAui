@@ -26,7 +26,6 @@ const ButtonComponent = () => {
           <div className="mb-4">
             <h4 className="text-xl font-semibold">Code</h4>
             <div className="flex flex-row justify-between items-center gap-4">
-              {" "}
               <div className="w-1/2 relative rounded-lg overflow-auto bg-gray-700 p-4">
                 <div className="relative rounded-lg">
                   <SyntaxHighlighter
@@ -34,7 +33,7 @@ const ButtonComponent = () => {
                     style={duotoneDark}
                     className="rounded-lg h-[400px]"
                   >
-                    {variant.code as string}
+                    {variant.code}
                   </SyntaxHighlighter>
                   <BsClipboard2Heart
                     onClick={() => copyToClipboard(variant.code)}
@@ -43,16 +42,16 @@ const ButtonComponent = () => {
                 </div>
               </div>
               <div className="w-1/2 rounded-lg overflow-auto bg-gray-700 p-4">
-                <div className="relative rounded-lg ">
+                <div className="relative rounded-lg">
                   <SyntaxHighlighter
                     language="jsx"
                     style={duotoneDark}
                     className="rounded-lg h-[400px]"
                   >
-                    {variant.code2 as string}
+                    {variant.code2}
                   </SyntaxHighlighter>
                   <BsClipboard2Heart
-                    onClick={() => copyToClipboard(variant.code2 as string)}
+                    onClick={() => copyToClipboard(variant.code2)}
                     className="absolute top-3 right-6 text-white text-2xl cursor-pointer"
                   />
                 </div>
